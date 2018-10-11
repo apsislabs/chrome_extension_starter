@@ -1,0 +1,40 @@
+{
+  "extends": ["eslint:recommended", "prettier"],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "jquery": true,
+    "es6": true,
+    "node": true,
+    "webextensions": true
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "comma-dangle": 0,
+    "jsx-quotes": [1, "prefer-double"],
+    "no-alert": 1,
+    "no-console": 0,
+    "no-extra-semi": 2,
+    "no-unexpected-multiline": 2,
+    "no-unused-vars": [
+      1,
+      {
+        "vars": "all",
+        "args": "none"
+      }
+    ],
+    "react/jsx-no-duplicate-props": 2,
+    "react/jsx-no-undef": 2,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/no-danger": 1,
+    "react/no-did-update-set-state": 2,
+    "react/no-direct-mutation-state": 2,
+    "react/no-unknown-property": 2,
+    "react/prefer-es6-class": 2,
+    "react/react-in-jsx-scope": 2,
+    "semi": 2,
+    "prettier/prettier": "error"
+  }
+}

@@ -1,0 +1,9 @@
+# Project
+build
+builds
+
+# NPM
+node_modules
+
+# MAC
+.DS_STORE

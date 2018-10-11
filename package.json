@@ -1,0 +1,81 @@
+{
+  "name": "chrome_extension_starter",
+  "version": "0.0.1",
+  "description": "Chrome Extension Starter",
+  "scripts": {
+    "prebuild": "mkdirp builds",
+    "build": "node utils/build.js",
+    "postbuild": "cross-var bestzip ./builds/$npm_package_name-$npm_package_version.zip build",
+    "start": "node utils/webserver.js",
+    "format": "prettier es5 --write \"src/**/*.js\"",
+    "lint": "eslint \"src/**/*.js\" && echo Success",
+    "lint-fix": "eslint --fix \"src/**/*.js\"",
+    "postversion": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apsislabs/chrome_extension_starter.git"
+  },
+  "author": "Apsis Labs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apsislabs/chrome_extension_starter/issues"
+  },
+  "homepage": "https://github.com/apsislabs/chrome_extension_starter",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^3.3.7",
+    "chrome-extension-async": "^3.3.0",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "react": "^16.5.2",
+    "react-bootstrap": "^0.32.3",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-react": "^7.0.0",
+    "ajv": "^6.0.0",
+    "autoprefixer": "^9.1.5",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "bestzip": "^2.1.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.2",
+    "cross-var": "^1.1.0",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.4.0",
+    "eslint-config-prettier": "3.1.0",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-prettier": "3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "3.2.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "mkdirp": "0.5.1",
+    "node-sass": "^4.9.0",
+    "popper.js": "^1.14.3",
+    "postcss-loader": "^3.0.0",
+    "prettier": "1.14.3",
+    "pretty-quick": "^1.7.0",
+    "react-hot-loader": "^4.0.1",
+    "rucksack-css": "^1.0.2",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.8.3",
+    "webpack-bundle-analyzer": "^3.0.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.6",
+    "webpack-manifest-plugin": "^2.0.3",
+    "webpack-merge": "^4.1.2",
+    "write-file-webpack-plugin": "^4.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "pre-push": "npm run-script lint"
+    }
+  }
+}
