@@ -15,7 +15,7 @@ Copy this project into a new folder and modify the following:
 ### Developing
 
 1. `npm install`
-2. Run `npm run start`
+2. Run `npm start`
 3. Load the extension on Chrome following:
   1. Access `chrome://extensions/`
   2. Check `Developer mode`
@@ -26,12 +26,18 @@ Copy this project into a new folder and modify the following:
 
 ### Change the Port
 
-`npm run server` starts a [webpack server](https://webpack.github.io/docs/webpack-dev-server.html) to auto reload code as it is saved.
+`npm start` starts a [webpack server](https://webpack.github.io/docs/webpack-dev-server.html) to auto reload code as it is saved.
 
 You can run the server on another port if you want. Just specify the env var `port` like this:
 
 ```
-$ PORT=6002 npm run start
+$ PORT=6002 npm start
+```
+
+or on Windows cmd:
+
+```
+$ set PORT=6002 npm start
 ```
 
 **Note:** The [content scripts](https://developer.chrome.com/extensions/content_scripts) are excluded from hot reloading because they cannot connect to the local dev server since they run on different domains.
