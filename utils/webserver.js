@@ -13,7 +13,6 @@ for (var entryName in config.entry) {
       "webpack-dev-server/client?http://localhost:" + env.PORT,
       "webpack/hot/dev-server"
     ].concat(config.entry[entryName]);
-    console.log(config.entry[entryName]);
   }
 }
 
