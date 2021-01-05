@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/apsislabs/chrome_extension_starter",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bootstrap": "^3.3.7",
     "chrome-extension-async": "^3.3.0",
     "jquery": "^3.3.1",
