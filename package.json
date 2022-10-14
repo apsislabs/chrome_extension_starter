@@ -40,7 +40,7 @@
     "autoprefixer": "^9.1.5",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
-    "bestzip": "^2.1.1",
+    "bestzip": "^2.1.7",
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.2",
     "cross-var": "^1.1.0",
